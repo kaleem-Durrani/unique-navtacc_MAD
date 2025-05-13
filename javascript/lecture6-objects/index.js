@@ -1,94 +1,134 @@
-// // let myObject = {
-// //   email: "John@gmail.com",
-// //   name: "John",
-// //   job: "Developer",
-// //   age: 57,
-// //   favouriteMovies: ["a", "b", 1, 2, 3],
-// //   isStudent: false,
-// //   adress: {
-// //     street: "123",
-// //     country: "xyz",
-// //   },
-// // };
+/**
+ * JAVASCRIPT OBJECTS AND STRING METHODS
+ *
+ * This lecture covers two important JavaScript topics:
+ * 1. Objects - collections of related data and functionality
+ * 2. String methods - built-in functions to manipulate strings
+ */
 
-// // console.log(myObject.name);
-// // console.log(myObject.email);
-// // console.log(myObject.job);
-// // console.log(myObject.age);
+/**
+ * PART 1: JAVASCRIPT OBJECTS
+ *
+ * Objects are collections of key-value pairs where:
+ * - Keys are strings (or Symbols)
+ * - Values can be any data type (strings, numbers, booleans, arrays, other objects, functions)
+ */
 
-// // console.log("-------------------");
+// Example of a JavaScript object
+let person = {
+  email: "john@example.com",
+  name: "John",
+  job: "Developer",
+  age: 30,
+  favoriteMovies: ["Inception", "The Matrix", "Interstellar"],
+  isStudent: false,
+  address: {
+    street: "123 Main St",
+    city: "Boston",
+    country: "USA",
+  },
+  // Objects can also contain methods (functions)
+  greet: function () {
+    return "Hello, my name is " + this.name;
+  },
+};
 
-// // let key;
+// Accessing object properties using dot notation
+console.log("Name:", person.name);
+console.log("Email:", person.email);
+console.log("Job:", person.job);
+console.log("Age:", person.age);
+console.log("City:", person.address.city);
 
-// // console.log(myObject[key]);
+// Accessing object properties using bracket notation
+// This is useful when the property name is stored in a variable
+// or when the property name has special characters
+console.log("Using bracket notation:", person["name"]);
 
-// // console.log(myObject[key]);
+// Modifying object properties
+person.email = "john.doe@example.com";
+console.log("Updated email:", person.email);
 
-// // console.log(myObject);
+// Adding new properties to an object
+person.phoneNumber = "555-1234";
+console.log("Added phone number:", person.phoneNumber);
 
-// // console.log(myObject);
+// Calling an object method
+console.log(person.greet());
 
-// // // console.log(myObject.email);
+console.log("-------------------");
 
-// // // myObject.email = "john@yahoo.com";
+/**
+ * PART 2: STRING METHODS
+ *
+ * JavaScript provides many built-in methods to manipulate strings.
+ */
 
-// // // console.log(myObject);
+let myString = "JavaScript is fun";
 
-// // console.log(myObject["email"]);
+// length - returns the number of characters in a string
+console.log("String length:", myString.length);
 
-// // myObject["email"] = "john@yahoo2.com";
-// // console.log(myObject);
+// at() - returns the character at a specified index
+console.log("Character at index 0:", myString.at(0));
+console.log("Character at index 4:", myString.at(4));
 
-// // let key = "aasdfasdf";
+// toUpperCase() - converts a string to uppercase
+console.log("Uppercase:", myString.toUpperCase());
 
-// // console.log(myObject[key]);
+// toLowerCase() - converts a string to lowercase
+console.log("Lowercase:", myString.toLowerCase());
 
-// let myString = "Abcd";
+// concat() - joins two or more strings
+console.log("Concatenated:", myString.concat(" and powerful!"));
 
-// // legnth gives us the legnth of the string
-// console.log(myString.length);
+// endsWith() - checks if a string ends with specified characters
+console.log("Ends with 'fun':", myString.endsWith("fun"));
+console.log("Ends with 'code':", myString.endsWith("code"));
 
-// // at method gives us the character at that index
-// console.log(myString.at(0));
+// includes() - checks if a string contains a specified value
+console.log("Includes 'Script':", myString.includes("Script"));
 
-// // uppercase changes a string or character to uppercase
-// console.log("abc".toUpperCase());
+// slice() - extracts a part of a string
+console.log("First 4 characters:", myString.slice(0, 4));
 
-// // lowercase changes a string or character to lowercase
-// console.log("XYZ".toLowerCase());
+// indexOf() - returns the position of the first occurrence of a value
+console.log("Position of 'is':", myString.indexOf("is"));
 
-// // concat makes one single srtring out of one or a group of strings
-// console.log(myString.concat("efg", "asdfasdff", "asdfasdf", 1232));
+// lastIndexOf() - returns the position of the last occurrence of a value
+let sentence = "A quick brown fox jumps over a lazy dog a";
+console.log("Last occurrence of 'a':", sentence.lastIndexOf("a"));
 
-// // endsWith checks if the last characters of a string match
-// console.log(myString.endsWith("bcd"));
+// trim(), trimStart(), trimEnd() - removes whitespace
+let spacedString = "   Hello World   ";
+console.log("Trimmed:", spacedString.trim());
+console.log("Trim start:", spacedString.trimStart());
+console.log("Trim end:", spacedString.trimEnd());
 
-// checks if a search string exists atleast one time
-// console.log(myString.includes(""));
+/**
+ * PRACTICAL EXAMPLE: Checking for special characters
+ */
+console.log("\nPRACTICAL EXAMPLE: Checking for special characters");
 
-// myString = "0123456789";
-
-// // slices a string into a substring
-// console.log(myString.slice(0, 2));
-
-let myString = "a quick brown fox jumps over a lazy dog a";
-
-
-
-// console.log(myString.lastIndexOf("a"));
-
-// console.log(myString.trimEnd());
-
-let specialCharacters = ["!", "@", "$"];
-
+let text = "Hello! How are you?";
+let specialCharacters = ["!", "@", "#", "$", "%", "?"];
 let includesSpecialCharacter = false;
 
-for (let i = 0; i < specialCharacters.length; i += 1) {
-  for (let j = 0; j < myString.length; j += 1) {
-    console.log("comparing", specialCharacters[i], " with ", myString.at(j));
-    if (specialCharacters[i] === myString.at(j)) {
-      includesSpecialCharacter = true;
-      break;
-    }
+// More efficient approach using string methods
+for (let i = 0; i < specialCharacters.length; i++) {
+  if (text.includes(specialCharacters[i])) {
+    includesSpecialCharacter = true;
+    console.log("Found special character:", specialCharacters[i]);
+    // We could break here, but let's find all special characters
   }
 }
+
+console.log("Text contains special characters:", includesSpecialCharacter);
+
+/**
+ * PRACTICE EXERCISES:
+ *
+ * 1. Create an object representing a car with properties like make, model, year, and color
+ * 2. Write code to count how many vowels are in a string
+ * 3. Create a function that converts a string to title case (first letter of each word capitalized)
+ */

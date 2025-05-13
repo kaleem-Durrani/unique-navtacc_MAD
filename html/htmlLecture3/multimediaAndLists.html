@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Multimedia and Lists</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+      h1 {
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
+      }
+      .section {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+      }
+      .example {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 5px;
+      }
+      .note {
+        background-color: #e8f4fd;
+        border-left: 4px solid #2196f3;
+        padding: 10px;
+        margin: 20px 0;
+      }
+      code {
+        background-color: #f5f5f5;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-family: monospace;
+      }
+      .media-container {
+        margin: 15px 0;
+      }
+      img,
+      audio,
+      video,
+      iframe {
+        max-width: 100%;
+        border: 1px solid #ddd;
+      }
+      .highlight {
+        background-color: #ffeb3b;
+        padding: 2px;
+      }
+      .red-bg {
+        background-color: red;
+        color: white;
+        padding: 2px 5px;
+      }
+      textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      select {
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        width: 100%;
+        max-width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>HTML Multimedia and Lists</h1>
+      <p>
+        This page demonstrates various HTML elements for multimedia, lists, and
+        other useful tags.
+      </p>
+
+      <!-- SECTION: TEXT FORMATTING -->
+      <div class="section">
+        <h2>Text Formatting and Semantic Elements</h2>
+        <p>
+          HTML provides various elements for formatting text and adding semantic
+          meaning.
+        </p>
+
+        <div class="example">
+          <h3>Span Element</h3>
+          <p>
+            The <code>&lt;span&gt;</code> element is an inline container used to
+            mark up a part of a text: This is
+            <span class="red-bg">a highlighted</span> text within a paragraph.
+          </p>
+
+          <h3>Cite Element</h3>
+          <p>
+            The <code>&lt;cite&gt;</code> element is used to define the title of
+            a creative work: <cite>The Origin of Species</cite> by Charles
+            Darwin
+          </p>
+
+          <h3>Abbreviation Element</h3>
+          <p>
+            The <code>&lt;abbr&gt;</code> element defines an abbreviation or
+            acronym: <abbr title="World Wide Web">WWW</abbr> (hover over to see
+            the full title)
+          </p>
+        </div>
+      </div>
+
+      <!-- SECTION: FORM ELEMENTS -->
+      <div class="section">
+        <h2>Form Elements</h2>
+        <p>Some common form elements for user input.</p>
+
+        <div class="example">
+          <h3>Textarea</h3>
+          <p>
+            The <code>&lt;textarea&gt;</code> element defines a multi-line text
+            input field:
+          </p>
+          <label for="descriptionInput">Write your description here:</label>
+          <textarea
+            id="descriptionInput"
+            name="description"
+            rows="4"
+            cols="50"
+            placeholder="Enter your text here..."
+          ></textarea>
+          <p>
+            <small
+              >The <code>rows</code> and <code>cols</code> attributes specify
+              the visible height and width.</small
+            >
+          </p>
+
+          <h3>Select Dropdown</h3>
+          <p>
+            The <code>&lt;select&gt;</code> element creates a dropdown list:
+          </p>
+          <label for="cityInput">Select a city:</label>
+          <select name="city" id="cityInput">
+            <option value="">-- Select a city --</option>
+            <option value="karachi">Karachi</option>
+            <option value="lahore">Lahore</option>
+            <option value="islamabad">Islamabad</option>
+            <option value="quetta">Quetta</option>
+            <option value="peshawar">Peshawar</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- SECTION: LISTS -->
+      <div class="section">
+        <h2>HTML Lists</h2>
+        <p>
+          HTML provides three types of lists: unordered lists, ordered lists,
+          and description lists.
+        </p>
+
+        <div class="example">
+          <h3>Unordered List</h3>
+          <p>
+            The <code>&lt;ul&gt;</code> element defines an unordered (bulleted)
+            list:
+          </p>
+          <p>Shopping List:</p>
+          <ul>
+            <li>Apples</li>
+            <li>Bananas</li>
+            <li>Milk</li>
+            <li>Bread</li>
+            <li>Eggs</li>
+          </ul>
+          <p>
+            <small
+              >You can change the bullet style with CSS or the
+              <code>type</code> attribute (circle, disc, square).</small
+            >
+          </p>
+
+          <h3>Ordered List</h3>
+          <p>
+            The <code>&lt;ol&gt;</code> element defines an ordered (numbered)
+            list:
+          </p>
+          <p>Steps to Make Tea:</p>
+          <ol>
+            <li>Boil water</li>
+            <li>Add tea leaves</li>
+            <li>Add sugar</li>
+            <li>Add milk</li>
+          </ol>
+          <p>
+            <small
+              >You can specify the starting number with the
+              <code>start</code> attribute and the numbering type with the
+              <code>type</code> attribute (1, A, a, I, i).</small
+            >
+          </p>
+
+          <h3>Ordered List with Custom Start and Type</h3>
+          <ol type="i" start="5">
+            <li>Fifth item (v)</li>
+            <li>Sixth item (vi)</li>
+            <li>Seventh item (vii)</li>
+            <li>Eighth item (viii)</li>
+          </ol>
+
+          <h3>Description List</h3>
+          <p>The <code>&lt;dl&gt;</code> element defines a description list:</p>
+          <dl>
+            <dt>HTML</dt>
+            <dd>
+              HyperText Markup Language - the standard markup language for
+              creating web pages.
+            </dd>
+
+            <dt>CSS</dt>
+            <dd>
+              Cascading Style Sheets - used for describing the presentation of a
+              document written in HTML.
+            </dd>
+
+            <dt>JavaScript</dt>
+            <dd>A programming language that enables interactive web pages.</dd>
+          </dl>
+        </div>
+      </div>
+
+      <!-- SECTION: MULTIMEDIA -->
+      <div class="section">
+        <h2>Multimedia Elements</h2>
+        <p>HTML5 provides built-in support for audio, video, and images.</p>
+
+        <div class="example">
+          <h3>Images</h3>
+          <p>
+            The <code>&lt;img&gt;</code> element is used to embed images in a
+            webpage:
+          </p>
+          <div class="media-container">
+            <img
+              src="assets/images/download.jpg"
+              alt="Image of a bird"
+              width="300"
+            />
+          </div>
+          <p>
+            <small
+              >The <code>alt</code> attribute provides alternative text for
+              screen readers and if the image cannot be displayed.</small
+            >
+          </p>
+
+          <h3>Audio</h3>
+          <p>
+            The <code>&lt;audio&gt;</code> element is used to embed sound
+            content:
+          </p>
+          <div class="media-container">
+            <audio
+              src="assets/audio/dark-engine-logo-141942.mp3"
+              controls
+            ></audio>
+          </div>
+          <p>
+            <small
+              >The <code>controls</code> attribute adds audio controls (play,
+              pause, volume).</small
+            >
+          </p>
+
+          <h3>Video</h3>
+          <p>
+            The <code>&lt;video&gt;</code> element is used to embed video
+            content:
+          </p>
+          <div class="media-container">
+            <p><em>Video element example (commented out in the code):</em></p>
+            <code
+              >&lt;video src="assets/video/example.mp4" width="300" height="200"
+              controls&gt;&lt;/video&gt;</code
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION: IFRAME -->
+      <div class="section">
+        <h2>Iframe Element</h2>
+        <p>
+          The <code>&lt;iframe&gt;</code> element is used to embed another
+          document within the current HTML document:
+        </p>
+
+        <div class="example">
+          <p>Example of an iframe embedding a website:</p>
+          <div class="media-container">
+            <iframe
+              src="https://www.example.com"
+              width="600"
+              height="300"
+              frameborder="0"
+            ></iframe>
+          </div>
+          <p>
+            <small
+              >Note: Some websites block being displayed in iframes for security
+              reasons.</small
+            >
+          </p>
+        </div>
+      </div>
+
+      <!-- SECTION: LINKS -->
+      <div class="section">
+        <h2>Links</h2>
+        <p>HTML links are defined with the <code>&lt;a&gt;</code> tag:</p>
+
+        <div class="example">
+          <p>
+            <!-- Updated to reflect the new file name -->
+            <a href="linkedPage.html">Click here to go to the linked page</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- SECTION: SPECIAL CHARACTERS -->
+      <div class="section">
+        <h2>Special Characters</h2>
+        <p>
+          HTML entities are used to display reserved characters and special
+          symbols:
+        </p>
+
+        <div class="example">
+          <p>Copyright symbol: &copy;</p>
+          <p>Registered trademark: &reg;</p>
+          <p>Euro symbol: &euro;</p>
+          <p>Greater than: &gt;</p>
+          <p>Less than: &lt;</p>
+          <p>Ampersand: &amp;</p>
+        </div>
+      </div>
+
+      <!-- SECTION: PRACTICE EXERCISE -->
+      <div class="section">
+        <h2>Practice Exercise</h2>
+        <p>Try creating a webpage that includes:</p>
+        <ol>
+          <li>At least one ordered and one unordered list</li>
+          <li>An image with appropriate alt text</li>
+          <li>An audio or video element</li>
+          <li>A form with a textarea and select dropdown</li>
+          <li>
+            Some text formatting elements like <code>&lt;span&gt;</code>,
+            <code>&lt;cite&gt;</code>, or <code>&lt;abbr&gt;</code>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>

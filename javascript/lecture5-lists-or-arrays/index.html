@@ -3,10 +3,155 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arrays</title>
-    <script src="index.js"></script>
+    <title>JavaScript Arrays</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+      h1 {
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .note {
+        background-color: #fff8e1;
+        border-left: 4px solid #ffc107;
+        padding: 10px;
+        margin: 20px 0;
+      }
+      code {
+        background-color: #f5f5f5;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-family: monospace;
+      }
+      pre {
+        background-color: #f5f5f5;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+      .example {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 5px;
+      }
+      .method {
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+      }
+    </style>
   </head>
   <body>
-    <h1>Arrays or Lists</h1>
+    <div class="container">
+      <h1>JavaScript Arrays</h1>
+
+      <div class="note">
+        <p>
+          <strong>Note:</strong> Open the browser console (F12 or right-click >
+          Inspect > Console) to see the output of the JavaScript code.
+        </p>
+      </div>
+
+      <h2>What are Arrays?</h2>
+      <p>
+        Arrays are ordered collections of values that can be of any type. They
+        are used to store multiple values in a single variable.
+      </p>
+
+      <div class="example">
+        <h3>Creating Arrays</h3>
+        <pre><code>// Array of strings
+let fruits = ["Apple", "Banana", "Orange", "Mango"];
+
+// Array of numbers
+let numbers = [1, 2, 3, 4, 5];
+
+// Mixed array
+let mixed = ["text", 42, true, null, [1, 2, 3]];</code></pre>
+      </div>
+
+      <h2>Accessing Array Elements</h2>
+      <p>
+        Array elements are accessed using their index (position). The first
+        element has index 0, the second has index 1, and so on.
+      </p>
+
+      <pre><code>let fruits = ["Apple", "Banana", "Orange", "Mango"];
+
+console.log(fruits[0]); // Apple
+console.log(fruits[1]); // Banana
+console.log(fruits[2]); // Orange
+console.log(fruits[3]); // Mango
+
+// Access the last element
+console.log(fruits[fruits.length - 1]); // Mango</code></pre>
+
+      <h2>Common Array Methods</h2>
+
+      <div class="method">
+        <h3>Adding and Removing Elements</h3>
+        <ul>
+          <li><code>push()</code> - Adds elements to the end of an array</li>
+          <li><code>pop()</code> - Removes the last element</li>
+          <li><code>unshift()</code> - Adds elements to the beginning</li>
+          <li><code>shift()</code> - Removes the first element</li>
+        </ul>
+      </div>
+
+      <div class="method">
+        <h3>Finding Elements</h3>
+        <ul>
+          <li>
+            <code>indexOf()</code> - Returns the first index of an element
+          </li>
+          <li>
+            <code>includes()</code> - Checks if an array contains an element
+          </li>
+        </ul>
+      </div>
+
+      <div class="method">
+        <h3>Transforming Arrays</h3>
+        <ul>
+          <li><code>slice()</code> - Returns a portion of an array</li>
+          <li><code>concat()</code> - Joins arrays together</li>
+          <li><code>join()</code> - Converts an array to a string</li>
+        </ul>
+      </div>
+
+      <h2>Iterating Through Arrays</h2>
+      <p>
+        The most common way to iterate through an array is using a for loop:
+      </p>
+
+      <pre><code>let fruits = ["Apple", "Banana", "Orange", "Mango"];
+
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}</code></pre>
+    </div>
+
+    <!-- Place script at the end of body for better page loading performance -->
+    <script src="index.js"></script>
   </body>
 </html>

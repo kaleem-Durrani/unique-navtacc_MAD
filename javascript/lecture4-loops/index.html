@@ -3,10 +3,190 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Loops</title>
-    <script src="index.js"></script>
+    <title>JavaScript Loops</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+      h1 {
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .note {
+        background-color: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 10px;
+        margin: 20px 0;
+      }
+      code {
+        background-color: #f5f5f5;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-family: monospace;
+      }
+      pre {
+        background-color: #f5f5f5;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+      .loop-type {
+        margin-bottom: 30px;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        border-left: 4px solid #2196f3;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
   </head>
   <body>
-    <h1>Loops</h1>
+    <div class="container">
+      <h1>JavaScript Loops</h1>
+
+      <div class="note">
+        <p>
+          <strong>Note:</strong> Open the browser console (F12 or right-click >
+          Inspect > Console) to see the output of the JavaScript code.
+        </p>
+      </div>
+
+      <h2>What are Loops?</h2>
+      <p>
+        Loops are used to execute a block of code repeatedly until a specified
+        condition is met. They are essential for automating repetitive tasks and
+        processing collections of data.
+      </p>
+
+      <table>
+        <tr>
+          <th>Loop Type</th>
+          <th>Description</th>
+          <th>Best Used When</th>
+        </tr>
+        <tr>
+          <td>for</td>
+          <td>Runs code a specific number of times</td>
+          <td>You know exactly how many iterations you need</td>
+        </tr>
+        <tr>
+          <td>while</td>
+          <td>Runs code while a condition is true</td>
+          <td>You don't know how many iterations you need in advance</td>
+        </tr>
+        <tr>
+          <td>do-while</td>
+          <td>
+            Runs code at least once, then continues while a condition is true
+          </td>
+          <td>
+            You need the code to execute at least once regardless of the
+            condition
+          </td>
+        </tr>
+      </table>
+
+      <div class="loop-type">
+        <h3>For Loop</h3>
+        <p>The for loop has three parts:</p>
+        <ol>
+          <li>
+            <strong>Initialization:</strong> Executed once before the loop
+            starts
+          </li>
+          <li><strong>Condition:</strong> Evaluated before each iteration</li>
+          <li><strong>Update:</strong> Executed after each iteration</li>
+        </ol>
+
+        <pre><code>for (let i = 0; i < 5; i++) {
+  console.log(i);
+}</code></pre>
+      </div>
+
+      <div class="loop-type">
+        <h3>While Loop</h3>
+        <p>
+          The while loop continues as long as the specified condition is true.
+        </p>
+
+        <pre><code>let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}</code></pre>
+      </div>
+
+      <div class="loop-type">
+        <h3>Do-While Loop</h3>
+        <p>
+          The do-while loop is similar to the while loop, but it always executes
+          the code block at least once before checking the condition.
+        </p>
+
+        <pre><code>let i = 0;
+do {
+  console.log(i);
+  i++;
+} while (i < 5);</code></pre>
+      </div>
+
+      <h2>Common Loop Patterns</h2>
+
+      <h3>Looping Through Arrays</h3>
+      <pre><code>let fruits = ["Apple", "Banana", "Orange", "Mango"];
+
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}</code></pre>
+
+      <h3>Skipping Iterations with continue</h3>
+      <pre><code>for (let i = 1; i <= 10; i++) {
+  if (i % 2 === 0) {
+    continue; // Skip even numbers
+  }
+  console.log(i); // Only prints odd numbers
+}</code></pre>
+
+      <h3>Breaking Out of Loops with break</h3>
+      <pre><code>for (let i = 1; i <= 10; i++) {
+  if (i === 5) {
+    break; // Exit the loop when i is 5
+  }
+  console.log(i); // Only prints 1, 2, 3, 4
+}</code></pre>
+    </div>
+
+    <!-- Place script at the end of body for better page loading performance -->
+    <script src="index.js"></script>
   </body>
 </html>

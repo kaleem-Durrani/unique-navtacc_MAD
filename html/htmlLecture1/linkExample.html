@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link Example Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+      }
+      .back-link {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 15px;
+        background-color: #2196f3;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+      }
+      .back-link:hover {
+        background-color: #0b7dda;
+      }
+      .note {
+        background-color: #fff8e1;
+        border-left: 4px solid #ffc107;
+        padding: 10px;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Link Example Page</h1>
+
+      <p>
+        This page demonstrates how HTML links work. You arrived here by clicking
+        a link on the main page.
+      </p>
+
+      <div class="note">
+        <p>
+          <strong>Note:</strong> In HTML, links are created using the
+          <code>&lt;a&gt;</code> tag (anchor tag). The
+          <code>href</code> attribute specifies the destination of the link.
+        </p>
+      </div>
+
+      <h2>Types of Links in HTML</h2>
+      <ul>
+        <li>
+          <strong>Internal Links</strong> - Link to pages within the same
+          website
+        </li>
+        <li>
+          <strong>External Links</strong> - Link to pages on other websites
+        </li>
+        <li>
+          <strong>Email Links</strong> - Open the user's email client (<code
+            >&lt;a href="mailto:example@example.com"&gt;</code
+          >)
+        </li>
+        <li>
+          <strong>Telephone Links</strong> - Call a number on mobile devices
+          (<code>&lt;a href="tel:+1234567890"&gt;</code>)
+        </li>
+        <li>
+          <strong>Anchor Links</strong> - Jump to specific sections within a
+          page (<code>&lt;a href="#section-id"&gt;</code>)
+        </li>
+      </ul>
+
+      <!-- Updated to reflect the new file name -->
+      <a href="textTags.html" class="back-link">Return to Text Tags Page</a>
+    </div>
+  </body>
+</html>

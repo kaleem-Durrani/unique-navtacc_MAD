@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Text Tags</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      .section {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+      }
+      .tag-example {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 5px;
+      }
+      .tag-name {
+        color: #2196f3;
+        font-weight: bold;
+      }
+      .tag-description {
+        margin-bottom: 10px;
+      }
+      h1, h2, h3 {
+        color: #333;
+      }
+      code {
+        background-color: #f5f5f5;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>HTML Text Tags</h1>
+      <p>This page demonstrates various HTML text formatting tags and elements.</p>
+
+      <!-- SECTION: LINKS -->
+      <div class="section">
+        <h2>Anchor Tags (Links)</h2>
+        <p class="tag-description">The <code>&lt;a&gt;</code> tag defines a hyperlink, which is used to link from one page to another.</p>
+
+        <div class="tag-example">
+          <p class="tag-name">Internal Link Example:</p>
+          <!-- Updated to reflect the new file name -->
+          <a href="linkExample.html">Click here to go to the example page</a>
+
+          <p class="tag-name">External Link Example:</p>
+          <a href="https://www.w3schools.com/html/" target="_blank">Click here to visit W3Schools HTML Tutorial</a>
+          <p><small>Note: <code>target="_blank"</code> opens the link in a new tab</small></p>
+        </div>
+      </div>
+
+      <!-- SECTION: HEADINGS -->
+      <div class="section">
+        <h2>Heading Tags</h2>
+        <p class="tag-description">HTML provides six levels of headings, from <code>&lt;h1&gt;</code> (most important) to <code>&lt;h6&gt;</code> (least important).</p>
+
+        <div class="tag-example">
+          <h1>This is a Heading 1</h1>
+          <h2>This is a Heading 2</h2>
+          <h3>This is a Heading 3</h3>
+          <h4>This is a Heading 4</h4>
+          <h5>This is a Heading 5</h5>
+          <h6>This is a Heading 6</h6>
+        </div>
+      </div>
+
+      <!-- SECTION: PARAGRAPH AND LINE BREAKS -->
+      <div class="section">
+        <h2>Paragraph and Line Breaks</h2>
+        <p class="tag-description">The <code>&lt;p&gt;</code> tag defines a paragraph. The <code>&lt;br&gt;</code> tag inserts a single line break. The <code>&lt;hr&gt;</code> tag creates a horizontal rule (line).</p>
+
+        <div class="tag-example">
+          <p>This is a paragraph. Paragraphs are block-level elements that automatically add space before and after the content.</p>
+
+          <p>This is another paragraph.<br>This text appears on a new line because of the &lt;br&gt; tag.</p>
+
+          <hr>
+          <p>The horizontal line above was created with the &lt;hr&gt; tag.</p>
+        </div>
+      </div>
+
+      <!-- SECTION: TEXT FORMATTING -->
+      <div class="section">
+        <h2>Text Formatting Tags</h2>
+        <p class="tag-description">HTML provides several tags for formatting text in different ways.</p>
+
+        <div class="tag-example">
+          <p>
+            <span class="tag-name">Bold Text:</span><br>
+            <b>This text is bold using the &lt;b&gt; tag</b><br>
+            <strong>This text is important using the &lt;strong&gt; tag</strong>
+          </p>
+
+          <p>
+            <span class="tag-name">Italic Text:</span><br>
+            <i>This text is italic using the &lt;i&gt; tag</i><br>
+            <em>This text is emphasized using the &lt;em&gt; tag</em>
+          </p>
+
+          <p>
+            <span class="tag-name">Other Text Formatting:</span><br>
+            <u>This text is underlined using the &lt;u&gt; tag</u><br>
+            <del>This text is deleted using the &lt;del&gt; tag</del><br>
+            <mark>This text is highlighted using the &lt;mark&gt; tag</mark><br>
+            <small>This text is smaller using the &lt;small&gt; tag</small><br>
+            This text contains a superscript: x<sup>2</sup> using the &lt;sup&gt; tag<br>
+            This text contains a subscript: H<sub>2</sub>O using the &lt;sub&gt; tag
+          </p>
+        </div>
+      </div>
+
+      <!-- SECTION: QUOTATIONS -->
+      <div class="section">
+        <h2>Quotation Tags</h2>
+        <p class="tag-description">HTML provides specific tags for marking up quotations.</p>
+
+        <div class="tag-example">
+          <p>
+            <span class="tag-name">Block Quote:</span><br>
+            <blockquote>
+              This is a block quote. It is typically indented and used for longer quotations.
+              The &lt;blockquote&gt; tag is a block-level element.
+            </blockquote>
+          </p>
+
+          <p>
+            <span class="tag-name">Inline Quote:</span><br>
+            <q>This is an inline quote using the &lt;q&gt; tag.</q> It adds quotation marks automatically.
+          </p>
+        </div>
+      </div>
+
+      <!-- SECTION: COMPREHENSIVE EXAMPLE -->
+      <div class="section">
+        <h2>Comprehensive Example</h2>
+        <p class="tag-description">Here's an example that combines multiple text formatting tags:</p>
+
+        <div class="tag-example">
+          <p>
+            Lorem ipsum dolor sit amet, <b>this text is bold</b> while <i>this text is italic</i>.
+            <br>
+            <strong>This text is strongly emphasized</strong> and <em>this text is emphasized</em>.
+            <br>
+            You can <u>underline important information</u> or <del>strike through text that is no longer valid</del>.
+            <br>
+            <mark>Highlighting text</mark> can draw attention to it, while <small>smaller text can be used for fine print</small>.
+            <br>
+            Scientific formulas often use superscript (E=mc<sup>2</sup>) and subscript (H<sub>2</sub>O).
+            <br>
+            <blockquote>Block quotes are used for longer quotations that stand on their own.</blockquote>
+            <q>Inline quotes are used within the flow of text.</q>
+          </p>
+        </div>
+      </div>
+
+      <!-- SECTION: PRACTICE EXERCISE -->
+      <div class="section">
+        <h2>Practice Exercise</h2>
+        <p>Try creating your own paragraph that uses at least 5 different text formatting tags from this lesson.</p>
+      </div>
+    </div>
+  </body>
+</html>

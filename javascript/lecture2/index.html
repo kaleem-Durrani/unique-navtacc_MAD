@@ -3,11 +3,256 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lecture 2</title>
-    <script src="index.js"></script>
+    <title>JavaScript Basics - Part 2</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+      h1 {
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .note {
+        background-color: #e8f4fd;
+        border-left: 4px solid #2196f3;
+        padding: 10px;
+        margin: 20px 0;
+      }
+      code {
+        background-color: #f5f5f5;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-family: monospace;
+      }
+      pre {
+        background-color: #f5f5f5;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+      .section {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
   </head>
   <body>
-    <h1>Javascript Lecture 2</h1>
-    <h2>Operators</h2>
+    <div class="container">
+      <h1>JavaScript Basics - Part 2</h1>
+
+      <div class="note">
+        <p>
+          <strong>Note:</strong> Open the browser console (F12 or right-click >
+          Inspect > Console) to see the output of the JavaScript code.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Arithmetic Operators</h2>
+        <p>
+          JavaScript provides several operators for performing mathematical
+          calculations.
+        </p>
+
+        <table>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Example</th>
+            <th>Result</th>
+          </tr>
+          <tr>
+            <td>+</td>
+            <td>Addition</td>
+            <td><code>5 + 3</code></td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>-</td>
+            <td>Subtraction</td>
+            <td><code>5 - 3</code></td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>*</td>
+            <td>Multiplication</td>
+            <td><code>5 * 3</code></td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>/</td>
+            <td>Division</td>
+            <td><code>6 / 3</code></td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>**</td>
+            <td>Exponentiation</td>
+            <td><code>2 ** 3</code></td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>%</td>
+            <td>Modulus (Remainder)</td>
+            <td><code>7 % 3</code></td>
+            <td>1</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2>Data Types</h2>
+        <p>JavaScript has several built-in data types:</p>
+
+        <ul>
+          <li>
+            <strong>String</strong> - Text values (e.g., <code>"Hello"</code>)
+          </li>
+          <li>
+            <strong>Number</strong> - Numeric values (e.g., <code>42</code>,
+            <code>3.14</code>)
+          </li>
+          <li>
+            <strong>Boolean</strong> - <code>true</code> or <code>false</code>
+          </li>
+          <li>
+            <strong>Undefined</strong> - A variable that has been declared but
+            not assigned a value
+          </li>
+          <li>
+            <strong>Null</strong> - Represents the intentional absence of any
+            value
+          </li>
+          <li><strong>Object</strong> - Collections of related data</li>
+          <li>
+            <strong>Symbol</strong> - Unique and immutable primitive values
+          </li>
+        </ul>
+
+        <p>
+          You can check the type of a value using the
+          <code>typeof</code> operator:
+        </p>
+        <pre><code>typeof "Hello"   // "string"
+typeof 42        // "number"
+typeof true      // "boolean"</code></pre>
+      </div>
+
+      <div class="section">
+        <h2>Variables</h2>
+        <p>
+          Variables are containers for storing data values. In JavaScript, we
+          declare variables using:
+        </p>
+
+        <ul>
+          <li><code>let</code> - For variables that can be reassigned</li>
+          <li><code>const</code> - For variables that cannot be reassigned</li>
+          <li>
+            <code>var</code> - Older way to declare variables (not recommended
+            for modern code)
+          </li>
+        </ul>
+
+        <h3>Declaring Variables</h3>
+        <pre><code>// Using let
+let name = "John";
+let age = 25;
+let isStudent = true;
+
+// Using const
+const PI = 3.14159;
+const MAX_SIZE = 100;</code></pre>
+
+        <h3>Reassigning Variables</h3>
+        <pre><code>let score = 10;
+console.log(score);  // 10
+
+score = 20;
+console.log(score);  // 20
+
+// JavaScript is dynamically typed
+let value = "hello";
+value = 42;  // This is allowed!</code></pre>
+      </div>
+
+      <div class="section">
+        <h2>String Concatenation and Template Literals</h2>
+        <p>There are multiple ways to combine strings in JavaScript:</p>
+
+        <h3>Traditional Concatenation</h3>
+        <pre><code>let name = "John";
+let age = 25;
+
+// Using the + operator
+let message = "My name is " + name + " and I am " + age + " years old.";
+console.log(message);</code></pre>
+
+        <h3>Template Literals (ES6)</h3>
+        <pre><code>// Using backticks (`) and ${expression} syntax
+let message = `My name is ${name} and I am ${age} years old.`;
+console.log(message);</code></pre>
+      </div>
+
+      <div class="section">
+        <h2>Variable Swapping</h2>
+        <p>Sometimes we need to swap the values of two variables:</p>
+
+        <h3>Method 1: Using a Temporary Variable</h3>
+        <pre><code>let a = 5;
+let b = 10;
+
+// Swap using a temporary variable
+let temp = a;
+a = b;
+b = temp;
+
+console.log(a, b);  // 10, 5</code></pre>
+
+        <h3>Method 2: Using Destructuring Assignment (ES6)</h3>
+        <pre><code>let x = 5;
+let y = 10;
+
+// Swap using destructuring
+[x, y] = [y, x];
+
+console.log(x, y);  // 10, 5</code></pre>
+      </div>
+    </div>
+
+    <!-- Place script at the end of body for better page loading performance -->
+    <script src="index.js"></script>
   </body>
 </html>

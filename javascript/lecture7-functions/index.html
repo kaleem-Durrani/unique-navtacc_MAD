@@ -3,10 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Function</title>
-    <script src="index.js"></script>
+    <title>JavaScript Functions</title>
+    <!--
+      Note: For learning purposes, it's better to place the script tag at the end of the body
+      to ensure the HTML is loaded before the JavaScript runs. However, in this simple example,
+      it doesn't matter since we're not manipulating any DOM elements.
+    -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      h1 {
+        color: #333;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .note {
+        background-color: #fffde7;
+        border-left: 4px solid #ffd600;
+        padding: 10px;
+        margin: 20px 0;
+      }
+      code {
+        background-color: #f5f5f5;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-family: monospace;
+      }
+    </style>
   </head>
   <body>
-    <h1>Functions</h1>
+    <div class="container">
+      <h1>JavaScript Functions</h1>
+
+      <div class="note">
+        <p>
+          <strong>Note:</strong> Open the browser console (F12 or right-click >
+          Inspect > Console) to see the output of the JavaScript code.
+        </p>
+      </div>
+
+      <h2>What are Functions?</h2>
+      <p>
+        Functions are reusable blocks of code designed to perform specific
+        tasks. They help us:
+      </p>
+      <ul>
+        <li>Organize code into logical blocks</li>
+        <li>Reduce code duplication</li>
+        <li>Make code more maintainable and readable</li>
+        <li>Create reusable components</li>
+      </ul>
+
+      <h2>Function Syntax</h2>
+      <p>Basic syntax of a JavaScript function:</p>
+      <pre><code>function functionName(parameter1, parameter2) {
+  // Code to be executed
+  return result; // Optional return statement
+}</code></pre>
+    </div>
+
+    <!-- Place script at the end of body for better page loading performance -->
+    <script src="index.js"></script>
   </body>
 </html>

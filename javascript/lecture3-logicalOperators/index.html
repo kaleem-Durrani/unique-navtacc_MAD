@@ -3,10 +3,246 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Logical Operators</title>
-    <script src="index.js"></script>
+    <title>JavaScript Comparison and Logical Operators</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+      h1 {
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .note {
+        background-color: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 10px;
+        margin: 20px 0;
+      }
+      code {
+        background-color: #f5f5f5;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-family: monospace;
+      }
+      pre {
+        background-color: #f5f5f5;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      .example {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 5px;
+      }
+      .true {
+        color: green;
+        font-weight: bold;
+      }
+      .false {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
-    <h1>Logical Operators</h1>
+    <div class="container">
+      <h1>JavaScript Comparison and Logical Operators</h1>
+
+      <div class="note">
+        <p>
+          <strong>Note:</strong> Open the browser console (F12 or right-click >
+          Inspect > Console) to see the output of the JavaScript code.
+        </p>
+      </div>
+
+      <h2>Comparison Operators</h2>
+      <p>
+        Comparison operators compare two values and return a boolean result
+        (true or false).
+      </p>
+
+      <table>
+        <tr>
+          <th>Operator</th>
+          <th>Name</th>
+          <th>Example</th>
+          <th>Result</th>
+        </tr>
+        <tr>
+          <td>&gt;</td>
+          <td>Greater than</td>
+          <td><code>5 > 3</code></td>
+          <td class="true">true</td>
+        </tr>
+        <tr>
+          <td>&lt;</td>
+          <td>Less than</td>
+          <td><code>5 < 3</code></td>
+          <td class="false">false</td>
+        </tr>
+        <tr>
+          <td>&gt;=</td>
+          <td>Greater than or equal to</td>
+          <td><code>5 >= 5</code></td>
+          <td class="true">true</td>
+        </tr>
+        <tr>
+          <td>&lt;=</td>
+          <td>Less than or equal to</td>
+          <td><code>5 <= 5</code></td>
+          <td class="true">true</td>
+        </tr>
+        <tr>
+          <td>==</td>
+          <td>Equal to (value)</td>
+          <td><code>5 == "5"</code></td>
+          <td class="true">true</td>
+        </tr>
+        <tr>
+          <td>===</td>
+          <td>Strict equal to (value and type)</td>
+          <td><code>5 === "5"</code></td>
+          <td class="false">false</td>
+        </tr>
+        <tr>
+          <td>!=</td>
+          <td>Not equal to</td>
+          <td><code>5 != 3</code></td>
+          <td class="true">true</td>
+        </tr>
+        <tr>
+          <td>!==</td>
+          <td>Strict not equal to</td>
+          <td><code>5 !== "5"</code></td>
+          <td class="true">true</td>
+        </tr>
+      </table>
+
+      <h2>Logical Operators</h2>
+      <p>Logical operators are used to combine multiple conditions.</p>
+
+      <table>
+        <tr>
+          <th>Operator</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Example</th>
+        </tr>
+        <tr>
+          <td>&&</td>
+          <td>Logical AND</td>
+          <td>Returns true if both conditions are true</td>
+          <td>
+            <code>(5 > 3) && (10 > 5)</code> → <span class="true">true</span>
+          </td>
+        </tr>
+        <tr>
+          <td>||</td>
+          <td>Logical OR</td>
+          <td>Returns true if at least one condition is true</td>
+          <td>
+            <code>(5 < 3) || (10 > 5)</code> → <span class="true">true</span>
+          </td>
+        </tr>
+        <tr>
+          <td>!</td>
+          <td>Logical NOT</td>
+          <td>Returns the opposite boolean value</td>
+          <td><code>!(5 > 3)</code> → <span class="false">false</span></td>
+        </tr>
+      </table>
+
+      <h2>Conditional Statements</h2>
+      <p>
+        Conditional statements execute different code blocks based on different
+        conditions.
+      </p>
+
+      <div class="example">
+        <h3>if Statement</h3>
+        <pre><code>if (condition) {
+  // code to execute if condition is true
+}</code></pre>
+      </div>
+
+      <div class="example">
+        <h3>if-else Statement</h3>
+        <pre><code>if (condition) {
+  // code to execute if condition is true
+} else {
+  // code to execute if condition is false
+}</code></pre>
+      </div>
+
+      <div class="example">
+        <h3>if-else if-else Statement</h3>
+        <pre><code>if (condition1) {
+  // code to execute if condition1 is true
+} else if (condition2) {
+  // code to execute if condition1 is false and condition2 is true
+} else {
+  // code to execute if both condition1 and condition2 are false
+}</code></pre>
+      </div>
+
+      <h2>Practical Examples</h2>
+
+      <h3>Grading System</h3>
+      <pre><code>let marks = 78;
+let grade;
+
+if (marks <= 100 && marks >= 85) {
+  grade = "A";
+} else if (marks < 85 && marks >= 75) {
+  grade = "B";
+} else if (marks < 75 && marks >= 65) {
+  grade = "C";
+} else if (marks < 65 && marks >= 50) {
+  grade = "D";
+} else if (marks >= 0 && marks < 50) {
+  grade = "F";
+} else {
+  grade = "Invalid marks";
+}
+
+console.log(`Marks: ${marks}, Grade: ${grade}`);</code></pre>
+    </div>
+
+    <!-- Place script at the end of body for better page loading performance -->
+    <script src="index.js"></script>
   </body>
 </html>

@@ -3,10 +3,151 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="index.js"></script>
-    <title>Objects and string methods</title>
+    <title>JavaScript Objects and String Methods</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+      h1 {
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .note {
+        background-color: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 10px;
+        margin: 20px 0;
+      }
+      code {
+        background-color: #f5f5f5;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-family: monospace;
+      }
+      pre {
+        background-color: #f5f5f5;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+      .example {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 5px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 20px 0;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
   </head>
   <body>
-    <h1>Objects and string methods</h1>
+    <div class="container">
+      <h1>JavaScript Objects and String Methods</h1>
+
+      <div class="note">
+        <p>
+          <strong>Note:</strong> Open the browser console (F12 or right-click >
+          Inspect > Console) to see the output of the JavaScript code.
+        </p>
+      </div>
+
+      <h2>JavaScript Objects</h2>
+      <p>
+        Objects are collections of related data and functionality stored as
+        key-value pairs.
+      </p>
+
+      <div class="example">
+        <h3>Object Syntax</h3>
+        <pre><code>let person = {
+  name: "John",
+  age: 30,
+  isStudent: false,
+  address: {
+    city: "Boston",
+    country: "USA"
+  },
+  greet: function() {
+    return "Hello!";
+  }
+};</code></pre>
+      </div>
+
+      <h3>Accessing Object Properties</h3>
+      <p>There are two ways to access object properties:</p>
+      <ul>
+        <li><strong>Dot Notation:</strong> <code>person.name</code></li>
+        <li><strong>Bracket Notation:</strong> <code>person["name"]</code></li>
+      </ul>
+
+      <h2>String Methods</h2>
+      <p>JavaScript provides many built-in methods to manipulate strings.</p>
+
+      <table>
+        <tr>
+          <th>Method</th>
+          <th>Description</th>
+          <th>Example</th>
+        </tr>
+        <tr>
+          <td><code>length</code></td>
+          <td>Returns the length of a string</td>
+          <td><code>"Hello".length</code> → 5</td>
+        </tr>
+        <tr>
+          <td><code>toUpperCase()</code></td>
+          <td>Converts to uppercase</td>
+          <td><code>"hello".toUpperCase()</code> → "HELLO"</td>
+        </tr>
+        <tr>
+          <td><code>toLowerCase()</code></td>
+          <td>Converts to lowercase</td>
+          <td><code>"HELLO".toLowerCase()</code> → "hello"</td>
+        </tr>
+        <tr>
+          <td><code>includes()</code></td>
+          <td>Checks if string contains a value</td>
+          <td><code>"Hello".includes("lo")</code> → true</td>
+        </tr>
+        <tr>
+          <td><code>slice()</code></td>
+          <td>Extracts a part of a string</td>
+          <td><code>"Hello".slice(1, 3)</code> → "el"</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Place script at the end of body for better page loading performance -->
+    <script src="index.js"></script>
   </body>
 </html>

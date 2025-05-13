@@ -3,11 +3,187 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Javascript intro</title>
-
-    <script src="index.js"></script>
+    <title>JavaScript Basics - Part 1</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+      h1 {
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .note {
+        background-color: #fff3cd;
+        border-left: 4px solid #ffc107;
+        padding: 10px;
+        margin: 20px 0;
+      }
+      code {
+        background-color: #f5f5f5;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-family: monospace;
+      }
+      pre {
+        background-color: #f5f5f5;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+      .section {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+      }
+      .highlight {
+        background-color: #e8f5e9;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 15px 0;
+      }
+    </style>
   </head>
   <body>
-    <h1>Javascript Introduction</h1>
+    <div class="container">
+      <h1>JavaScript Introduction</h1>
+
+      <div class="note">
+        <p>
+          <strong>Note:</strong> Open the browser console (F12 or right-click >
+          Inspect > Console) to see the output of the JavaScript code.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>What is JavaScript?</h2>
+        <p>
+          JavaScript is a programming language that enables interactive web
+          pages. It is an essential part of web applications, and nearly all
+          modern websites use it.
+        </p>
+
+        <div class="highlight">
+          <h3>Key Features of JavaScript:</h3>
+          <ul>
+            <li>Client-side scripting language</li>
+            <li>Interpreted (not compiled)</li>
+            <li>Object-oriented</li>
+            <li>Event-driven</li>
+            <li>Lightweight and versatile</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Console.log()</h2>
+        <p>
+          The <code>console.log()</code> function is used to output messages to
+          the browser's console. It's one of the most basic debugging tools in
+          JavaScript.
+        </p>
+
+        <pre><code>// Basic usage
+console.log("Hello, World!");
+
+// Printing variables
+let name = "John";
+console.log(name);
+
+// Printing multiple values
+console.log("Name:", name, "Age:", 25);</code></pre>
+      </div>
+
+      <div class="section">
+        <h2>Variables</h2>
+        <p>
+          Variables are containers for storing data values. In JavaScript, we
+          use <code>let</code>, <code>const</code>, or <code>var</code> to
+          declare variables.
+        </p>
+
+        <pre><code>// Declaring variables
+let name = "John";      // String
+let age = 25;           // Number
+let isStudent = true;   // Boolean
+
+// Constants (cannot be reassigned)
+const PI = 3.14159;
+const MAX_USERS = 100;</code></pre>
+      </div>
+
+      <div class="section">
+        <h2>Data Types</h2>
+        <p>JavaScript has several built-in data types:</p>
+
+        <h3>Primitive Data Types:</h3>
+        <ul>
+          <li>
+            <strong>String:</strong> <code>"Hello"</code>, <code>'World'</code>
+          </li>
+          <li><strong>Number:</strong> <code>42</code>, <code>3.14</code></li>
+          <li>
+            <strong>Boolean:</strong> <code>true</code>, <code>false</code>
+          </li>
+          <li><strong>Undefined:</strong> <code>undefined</code></li>
+          <li><strong>Null:</strong> <code>null</code></li>
+          <li><strong>Symbol:</strong> <code>Symbol("id")</code></li>
+          <li>
+            <strong>BigInt:</strong> <code>BigInt(9007199254740991)</code>
+          </li>
+        </ul>
+
+        <h3>Complex Data Type:</h3>
+        <ul>
+          <li>
+            <strong>Object:</strong> <code>{ name: "John", age: 25 }</code>
+          </li>
+        </ul>
+
+        <pre><code>// Checking the type of a value
+console.log(typeof "Hello");     // "string"
+console.log(typeof 42);          // "number"
+console.log(typeof true);        // "boolean"
+console.log(typeof undefined);   // "undefined"
+console.log(typeof null);        // "object" (this is a known JavaScript quirk)
+console.log(typeof {});          // "object"</code></pre>
+      </div>
+
+      <div class="section">
+        <h2>Getting Started with JavaScript</h2>
+        <p>To include JavaScript in an HTML page, you can:</p>
+        <ol>
+          <li>Use the <code>&lt;script&gt;</code> tag directly in your HTML</li>
+          <li>Link to an external JavaScript file (recommended)</li>
+        </ol>
+
+        <h3>Internal JavaScript:</h3>
+        <pre><code>&lt;script&gt;
+  console.log("Hello from internal JavaScript!");
+&lt;/script&gt;</code></pre>
+
+        <h3>External JavaScript (what we're using):</h3>
+        <pre><code>&lt;script src="index.js"&gt;&lt;/script&gt;</code></pre>
+      </div>
+    </div>
+
+    <!-- Place script at the end of body for better page loading performance -->
+    <script src="index.js"></script>
   </body>
 </html>
