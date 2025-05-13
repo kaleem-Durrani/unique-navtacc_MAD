@@ -1,0 +1,81 @@
+li {
+    color: blueviolet;
+}
+
+.registration-div{
+    background-color: aquamarine;
+    border: 4px solid gray;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.registration-header{
+    font-style: italic;
+}
+
+/* Some frequently used styles */
+
+p {
+
+    /* for text colors of an element */
+    color: gray;
+
+    /* the type of font you want to apply */
+    font-family: 'Courier New', Courier, monospace;
+
+    /* the size you want your font to have */
+    font-size: 10px;
+
+    /* the thickness of boldness of your text */
+    font-weight: 900;
+
+    /* for italsizing and stlying text */
+    font-style: italic;
+
+    /* for applying a color to the background of an image */
+    background-color: aliceblue; 
+
+    /* for colors and gradients */
+    background: gray;
+
+    /* for background images */
+    background-image: none;
+
+    /* for positioninig a background image */
+    /* background-position: ; */
+
+
+    /* SPACING STYLES */
+
+    /* 1 => Margins */
+    /* margins are used for spacing outside of the border of an element (spacing from neighbouring elements) */
+
+    /* for spacing in all 4 directions */
+    margin: 1px; 
+
+    /* margin-left, margin-right, margin-top, margin-bottom */
+    /* for spacing in each induvidual direction */
+
+    /* for spaceing in both left and right directions */
+    margin-inline: 1px;
+
+    /* exactly the same as margin but for spaceing inside the border of an element */
+    padding: 1px;
+
+    /* Borders */
+    border: 1px solid black;
+    /* borders require size style and color  */
+
+    /* border can also be applied in a specific direction just like margin and padding */
+
+    /* for rounding the corners of an element */
+    border-radius: 10px;
+
+    /* border radius can be applied in all 4 corners */
+    /* border-top-left-radius: ;
+    border-bottom-right-radius: ;
+    border-top-left-radius: ;
+    border-top-right-radius: ; */
+
+    
+}

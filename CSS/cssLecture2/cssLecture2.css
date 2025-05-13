@@ -1,0 +1,65 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h3 {
+    color: purple;
+    font-style: italic;
+    background-color: aliceblue;
+}
+
+.m-1{
+    margin: 10px;
+}
+
+.mt-1{
+    margin-top: 10px;
+}
+
+.p-1{
+    padding: 10px;
+}
+
+.pt-1{
+    padding-top: 10px;
+}
+
+
+.profile-card{
+    color: red;
+}
+
+.profile-card-disabled{
+    background-color: red;
+}
+
+.profile-card-allowed{
+    background-color: green;
+}
+
+.profile-card-not-followed{
+    background-color: gray;
+}
+
+.paragraph-heading{
+    background-color: aqua;
+    margin: 20px;
+    padding: 20px;
+    border: 5px solid black;
+}
+
+
+.profile-photo-div{
+    background-color: aquamarine;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: 1px 2px 5px gray;
+}
+
+.linear-g-y-g-r{
+    background: linear-gradient(rgb(228, 253, 152), rgba(255, 0, 0, 0.297), red, rgb(105, 250, 105), rgba(0, 128, 0, 0.428), rgb(255, 95, 95))
+
+}
+
